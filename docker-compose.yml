@@ -7,3 +7,6 @@ services:
         STUDENT_NIM: "00000076823"
     ports:
       - 8000:80
+    environment:
+      - HOST=40.82.205.88
+      - NODE_ENV=production
