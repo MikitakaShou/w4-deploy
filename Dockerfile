@@ -10,9 +10,15 @@ ENV NUXT_STUDENT_NIM ${STUDENT_NIM}
 
 # TODO: code disini
 WORKDIR /app
+
 COPY package*.json ./
+
 RUN npm install
+
 COPY . .
-EXPOSE 8000
+
+EXPOSE 80
+
 RUN npm run build
+
 CMD["npm", "run", "start"]
